@@ -51,7 +51,9 @@ class Ball:
         self.speed = random.randint(1,10)
         
     def update(self):
-        self.y += self.speed
+        if self.y < 600 - 10 - 10*self.imageidx:
+            self.y += self.speed
+        
         
     def draw(self):
         self.image.draw(self.x,self.y)
