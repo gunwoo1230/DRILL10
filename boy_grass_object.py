@@ -1,6 +1,6 @@
 from pico2d import *
 import random
-
+import math
 
 # Game object class here
 class Grass:
@@ -48,6 +48,7 @@ class Ball:
             self.image = load_image('ball21x21.png')
         else:
             self.image = load_image('ball41x41.png')
+        self.speed = random.randint(1,10)
         
     def update(self):
         pass
