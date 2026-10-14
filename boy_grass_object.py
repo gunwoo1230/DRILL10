@@ -56,19 +56,17 @@ def reset_world():
     global world
     world = []
 
-    # 땅 객체를 생성하고 WORLD list에 추가
-    global grass
     grass = Grass()
     world.append(grass)
 
-    # 팀을 생성하고 WORLD list에 추가
-    global team
     team = [Boy() for i in range(10)]
     world += team
 
-    global zombie
     zombie = Zombie()
     world.append(zombie)
+
+    ball = Ball()
+    world.append(ball)
 
 def update_world():
     for o in world:
