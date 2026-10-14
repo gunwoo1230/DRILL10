@@ -42,7 +42,9 @@ class Boy:
 
 class Ball:
     def __init__(self):
-        pass
+        self.x, self.y = random.randint(100,700), 100
+        pass   
+        
     def update(self):
         pass
     def draw(self):
@@ -95,6 +97,7 @@ open_canvas()
 reset_world()
 
 while running:
+    handle_events()
     update_world()
     render_world()
     delay(0.05)
